@@ -1,8 +1,6 @@
 import java.awt.*;
 import java.text.NumberFormat;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.Scanner;
+import java.util.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -120,6 +118,63 @@ public class Main {
         //logical operators -> &&, ||
 
         //loops -> for, while, do-while
+
+
+        //ArrayList - dynamic array
+        ArrayList<Integer> num = new ArrayList<Integer>();
+        num.add(1);
+        num.add(2);
+        num.add(3);
+        num.add(4);
+        System.out.println(num.toString());
+        System.out.println(num.get(2));
+        num.remove(3); //removes from given index
+        System.out.println(num.toString());
+        num.remove(Integer.valueOf(1)); // removes particular value
+        System.out.println(num.toString());
+        System.out.println(num.isEmpty());
+        num.clear(); //clears entire arraylist
+        System.out.println(num.isEmpty());
+
+        ArrayList<Integer> nums = new ArrayList<Integer>();
+        nums.add(1);
+        nums.add(2);
+        nums.add(3);
+        nums.add(4);
+        nums.set(3, Integer.valueOf(40)); //set value 30 at position 3, that is replacing the value 4
+        nums.sort(Comparator.naturalOrder());
+        System.out.println(nums.toString());
+        nums.sort(Comparator.reverseOrder());
+        System.out.println(nums.toString());
+        System.out.println(nums.size());
+        System.out.println(nums.contains(Integer.valueOf(1)));
+
+        //loop over array list
+        nums.forEach(n -> {
+            System.out.println(n*2);
+        }); //for each n in nums, do n*2 and print -> This doesn't change original nums arraylist
+
+        //to modify arraylist
+        nums.forEach(n -> {
+            nums.set(nums.indexOf(n), n*2);
+        });
+        System.out.println(nums.toString());
+
+
+        //hashmaps in Java
+        HashMap<String, Integer> examScores = new HashMap<String, Integer>();
+        examScores.put("Maths", 85);
+        examScores.put("English", 90);
+        examScores.put("Socials", 95);
+        System.out.println(examScores.toString());
+        System.out.println(examScores.get("Maths"));
+        examScores.putIfAbsent("Math", 75);
+        examScores.putIfAbsent("Hindi", 75);
+        examScores.replace("Math", 70);
+        examScores.remove("Socials");
+        System.out.println(examScores.getOrDefault("Religion", 50));
+        System.out.println(examScores.size());
+
     }
 
 }
