@@ -115,6 +115,11 @@ public class Main {
         String line = scanner.nextLine();
         System.out.println("Line =" + line);
 
+        //comparison operators -> ==, !=, >=, <=, >, <
+
+        //logical operators -> &&, ||
+
+        //loops -> for, while, do-while
     }
 
 }
