@@ -175,6 +175,16 @@ public class Main {
         System.out.println(examScores.getOrDefault("Religion", 50));
         System.out.println(examScores.size());
 
+        //foreach loop in hashmaps
+        examScores.forEach((k, v) -> {
+            System.out.println(k + "-" + v);
+        });
+
+        examScores.forEach((k, v) -> {
+            examScores.remove(k, v-10);
+        });
+        System.out.println(examScores.toString());
+
     }
 
 }
